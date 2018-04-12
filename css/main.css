@@ -1,0 +1,200 @@
+.small{
+  display: none;
+}
+
+.current{
+  background-color: #333333;
+  color: yellow;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #eeeeee;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: 2em;
+    width: 88%;
+}
+
+main > a[href="index.php"]{
+    color: blue;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.editable{
+    width: 22%;
+}
+
+main i{
+    font-size: 4em;
+    text-align: center;
+}
+main figure i{
+    font-size: inherit;
+    text-align: inherit;
+}
+
+figure{
+    min-width: 11%;
+    max-width: 100%;
+    margin-bottom: 3%;
+}
+figure form[action="adminview.php"] input{
+    margin-left: 0.3em;
+    width: inherit;
+}
+
+input[name="delete"]{
+    float: left;
+}
+input[name="save"]{
+    float: right;
+}
+
+figcaption{
+    max-width: 16em;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+p{
+  font-size: 1.3em;
+  clear: left;
+}
+
+h1{
+  font-size: 2em;
+  margin: 0px;
+}
+
+header{
+    text-align: center;
+    padding: 0.5em;
+    font-size: 2.5em;
+    color: darkred;
+    transition: 0.1s ease;
+}
+
+a img{
+  float: left;
+}
+nav{    
+    list-style-type: none;
+    text-align: center;
+
+    box-shadow: 0em 0em 0.3em #000000;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    /*transition: 0.3s ease-out;*/
+}
+
+div{
+  display: inline-block;
+}
+
+nav div a{
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 0em;
+    padding-right: 0em;
+
+    transition: 0.6s ease;
+}
+nav div a:hover{
+    background-color: dimgrey;
+    color: white;
+    
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 1em;
+    padding-right: 1em;
+    
+    transition: 0.15s ease-out;
+    box-shadow: 0em 0em 1.1em #000000;
+}
+
+img{
+    max-width: 100%;
+}
+
+@media screen and (max-width: 44em) {
+  .large{
+    display: none;
+  }
+  .small{
+    display: inherit;
+  }
+    div{
+        display: block;
+    }
+}
+
+
+form{
+    margin-right: 23%;
+    text-align: right;
+}
+form > input[type="submit"]{
+    display: run-in;
+    /*margin-left: 33%;*/
+    margin-left: 1%;
+}
+
+form[action="login.php"]{
+    text-align: center;
+}
+
+form > input[type="text"]{
+    margin: 1em;
+    width: 50%;
+}
+
+form > input[name="checkout"]{
+    margin-left: 1em;
+    width: 100%;
+}
+
+form[action="checkout.php"] > input{
+    float: left;
+    width: 50%;
+}
+
+/*form > input[type="submit"]{
+    width: 100%;
+}*/
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 333;
+    background-color: darkgoldenrod;
+    color: white;
+    width: 100%;
+}
+
+td{
+    padding: 0.7em;
+    width: 43%;
+    min-width: 7em;
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+}

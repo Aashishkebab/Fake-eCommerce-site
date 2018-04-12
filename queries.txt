@@ -1,0 +1,11 @@
+insert into users (email, pass, type) values ("progress@assignment.com", "hello", "standard");
+
+insert into cart (email, identifier) values ("progress@assignment.com", "1a");
+
+insert into orderHistory (dateOfPurchase, email, identifier, licenseKey) values ("1/1/1111", "progress@assignment.com", "1a", "0238r08j");
+
+update users set pass = "hola" where email = "progress@assignment.com";
+
+delete from cart where (email = "progress@assignment.com" AND identifier = "1a");
+
+select itemsforsale.name from itemsforsale inner join orderHistory on orderHistory.identifier = itemsforsale.identifier where orderHistory.email = "progress@assignment.com";
