@@ -1,13 +1,9 @@
 <?php
     $servername = 'localhost';
 
-    //For server
-    /*$username = 'bharadwaj';
-    $password = 'DRF3F';*/
-
     //For localhost
-    $username = 'Bharadwaj';
-    $password = 'qsxdr^';
+    $username = 'root';
+    $password = '';
 
     $dbname = 'bharadwaj';
 
