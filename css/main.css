@@ -52,13 +52,6 @@ figure form[action="adminview.php"] input{
     width: 100%;
 }
 
-input[name="delete"]{
-    float: left;
-}
-input[name="save"]{
-    float: right;
-}
-
 input[name="checkout"]{
    margin-bottom: 3em;
 }
