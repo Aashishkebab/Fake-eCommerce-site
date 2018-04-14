@@ -24,7 +24,7 @@ main > a[href="index.php"]{
 .products{
     display: flex;
     flex-wrap: wrap;
-    
+
     align-items: center;
     justify-content: center;
 }
@@ -48,8 +48,8 @@ figure{
     margin-bottom: 3%;
 }
 figure form[action="adminview.php"] input{
-    margin-left: 0.3em;
-    width: inherit;
+    /*margin-left: 0.3em;*/
+    width: 100%;
 }
 
 input[name="delete"]{
@@ -57,6 +57,10 @@ input[name="delete"]{
 }
 input[name="save"]{
     float: right;
+}
+
+input[name="checkout"]{
+   margin-bottom: 3em;
 }
 
 figcaption{
@@ -89,7 +93,7 @@ header{
 a img{
   float: left;
 }
-nav{    
+nav{
     list-style-type: none;
     text-align: center;
 
@@ -117,12 +121,12 @@ nav div a{
 nav div a:hover{
     background-color: dimgrey;
     color: white;
-    
+
     margin-left: 0em;
     margin-right: 0em;
     padding-left: 1em;
     padding-right: 1em;
-    
+
     transition: 0.15s ease-out;
     box-shadow: 0em 0em 1.1em #000000;
 }
@@ -159,7 +163,10 @@ form[action="login.php"]{
 }
 
 form > input[type="text"]{
-    margin: 1em;
+    /*margin: 1em;*/
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
     width: 50%;
 }
 
