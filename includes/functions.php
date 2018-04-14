@@ -14,7 +14,7 @@
         $query = 'SELECT type FROM users WHERE username = :user';
         $statement = $db->prepare($query);
         $statement->bindValue(':user', $user);
-        $statement->execute();    
+        $statement->execute();
         $result = $statement->fetch();
         $statement->closeCursor();
         return $result['type'];
@@ -23,7 +23,7 @@
     function getAllItems($db){
         $query = 'SELECT * FROM itemsForSale';
         $statement = $db->prepare($query);
-        $statement->execute();    
+        $statement->execute();
         $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
@@ -33,7 +33,7 @@
         $query = 'SELECT * FROM itemsForSale WHERE identifier = :identifier';
         $statement = $db->prepare($query);
         $statement->bindValue(':identifier', $identifier);
-        $statement->execute();    
+        $statement->execute();
         $result = $statement->fetch();
         $statement->closeCursor();
         return $result['name'];
@@ -49,7 +49,7 @@
     }
 
     function getCart($username, $db){
-        $query = 'SELECT name, cost, cart.identifier FROM cart INNER JOIN itemsForSale on cart.identifier = itemsForSale.identifier WHERE username = :user';
+        $query = 'SELECT name, cost, cart.identifier, itemsForSale.hidden FROM cart INNER JOIN itemsForSale on cart.identifier = itemsForSale.identifier WHERE username = :user';
         $statement = $db->prepare($query);
         $statement->bindValue(':user', $username);
         $statement->execute();
@@ -146,7 +146,16 @@
     }
 
     function deleteItem($db, $identifier){
-        $query = 'DELETE FROM itemsForSale WHERE identifier = :identifier';
+        /*$query = 'DELETE FROM itemsForSale WHERE identifier = :identifier';*/
+        $query = 'UPDATE itemsForSale SET hidden = "true" WHERE identifier = :identifier';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':identifier', $identifier);
+        $statement->execute();
+        $statement->closeCursor();
+    }
+
+    function undeleteItem($db, $identifier){
+        $query = 'UPDATE itemsForSale SET hidden = "false" WHERE identifier = :identifier';
         $statement = $db->prepare($query);
         $statement->bindValue(':identifier', $identifier);
         $statement->execute();

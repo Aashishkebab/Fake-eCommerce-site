@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-        session_start();    
+        session_start();
         $title = "Aashish's Store";
         $content = "Buy random software from Aashish";
         require_once('includes/open_db.php');
         include('includes/header.php');
         include('includes/footer.php');
         require_once('includes/functions.php');
-    
+
         createDefaultAdmin($db);
     ?>
-	
+
 	<body>
 		<header>
             <?php
@@ -39,11 +39,11 @@
                 }
             ?>
 		</header>
-        
+
         <?php
             include('includes/navbar.php');
         ?>
-        
+
         <form method="POST" action="index.php" id="filter">
             <label>Search:</label>
             <?php
@@ -53,7 +53,7 @@
                 else{
                     echo '<input name="search" type="text" value="" />';
                 }
-            
+
                 if(isset($_POST['sort'])){
                     if($_POST['sort'] == "name"){
                         echo '<select form="filter" name="sort">';
@@ -79,18 +79,18 @@
             ?>
             <input type="submit" />
         </form>
-		
+
 		<main class="products">
             <?php
                 $items = getAllItems($db);
-            
+
                 sortStuff($items, $sort, 'pancakesort');
-                
+
                 if(isset($_POST['search']) && $_POST['search'] == ""){
                     unset($_POST['search']);
                 }
                 for($i = 0; $i < sizeof($items); $i = $i + 1){
-                    if(!isset($_POST['search']) || (isset($_POST['search']) && strpos(strtolower($items[$i]['name']), strtolower($_POST['search'])) !== false)){
+                    if($items[$i]['hidden'] != "true" && (!isset($_POST['search']) || (isset($_POST['search']) && strpos(strtolower($items[$i]['name']), strtolower($_POST['search'])) !== false))){
                         echo '<figure><img src="images/'.$items[$i]['identifier'].'.png" alt="'.$items[$i]['name'].'">';
                         echo '<figcaption>'.$items[$i]['name'].'<br><i>'.$items[$i]['description'].'</i><br><b>$'.$items[$i]['cost'].'</b></figcaption>';
 

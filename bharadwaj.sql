@@ -32,6 +32,7 @@ CREATE TABLE itemsForSale (
     cost            DECIMAL(33,2)   NOT NULL,
     identifier      VARCHAR(111)    NOT NULL,
     description     VARCHAR(333),
+    hidden          VARCHAR(5)      NOT NULL    DEFAULT 'false',
     PRIMARY KEY (identifier)
 );
 
