@@ -1,6 +1,6 @@
 -- create and select the database
 -- change your_server_user_name in the following line before running this file
-USE bharadwaj;  -- MySQL command
+USE aashishfakestore;  -- MySQL command
 
 -- drop tables if already exist
 DROP TABLE IF EXISTS orderHistory;
@@ -51,7 +51,8 @@ CREATE TABLE orderHistory (
 CREATE TABLE cart (
     username        VARCHAR(111)    NOT NULL,
     identifier      VARCHAR(111)    NOT NULL,
-    CONSTRAINT FOREIGN KEY (username) references users(username)
+    CONSTRAINT FOREIGN KEY (username) references users(username),
+    CONSTRAINT FOREIGN KEY (identifier) references itemsForSale(identifier)
 );
 
 -- populate the database
