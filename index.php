@@ -1,17 +1,16 @@
+<?php
+	session_start();
+	$title = "Aashish's Store";
+	$content = "Buy random software from Aashish";
+	require_once('includes/open_db.php');
+	include('includes/header.php');
+	include('includes/footer.php');
+	require_once('includes/functions.php');
+
+	createDefaultAdmin($db);
+?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-        session_start();
-        $title = "Aashish's Store";
-        $content = "Buy random software from Aashish";
-        require_once('includes/open_db.php');
-        include('includes/header.php');
-        include('includes/footer.php');
-        require_once('includes/functions.php');
-
-        createDefaultAdmin($db);
-    ?>
-
 	<body>
 		<header>
             <?php

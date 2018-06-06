@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
     <?php
         session_start();
         $title = "Admin page";
@@ -29,6 +26,9 @@
             unset($_POST['add']);
         }
     ?>
+	
+<!DOCTYPE html>
+<html lang="en">
 
 	<body>
 

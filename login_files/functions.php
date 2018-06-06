@@ -1,6 +1,5 @@
+  <?php
 
-  <?php 
-    
     function verify_login($db, $username, $password)
     {
       $query = "SELECT user_password FROM users WHERE username = :user";
@@ -12,7 +11,7 @@
       $hash = $result['user_password'];
       return password_verify($password, $hash);
     }
-    
+
     function existing_username($db, $username)
     {
       $query = "SELECT COUNT(username) FROM users WHERE username = :username";
@@ -31,11 +30,10 @@
       $statement->bindValue(':username', $username);
       $statement->bindValue(':password', $password);
       $success = $statement->execute();
-      $statement->closeCursor();     
+      $statement->closeCursor();
       return $success;
     }
-    
-     
+
     function validPassword($password){
       $valid_pattern = '/(?=^.{8,}$)(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).*$/';
       if (preg_match($valid_pattern, $password))
@@ -43,5 +41,4 @@
       else
         return false;
     }
-
 ?>

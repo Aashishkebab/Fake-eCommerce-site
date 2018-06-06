@@ -1,16 +1,15 @@
+<?php
+	session_start();
+	$title = "Purchase History";
+	$content = "See what you've bought from Aashish";
+	require_once('includes/functions.php');
+	require_once("includes/open_db.php");
+	include('includes/header.php');
+	include('includes/footer.php');
+?>
+
 <!DOCTYPE html>
-<html lang="en">
-    
-    <?php
-        session_start();
-        $title = "Purchase History";
-        $content = "See what you've bought from Aashish";
-        require_once('includes/functions.php');
-        require_once("includes/open_db.php");
-        include('includes/header.php');
-        include('includes/footer.php');
-    ?>
-	
+<html lang="en">	
 	<body>
 	
 		<header>

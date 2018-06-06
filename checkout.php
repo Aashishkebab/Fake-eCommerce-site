@@ -1,28 +1,30 @@
+<?php
+	session_start();
+    ob_start();
+	$title = "Checkout";
+	$content = "Give Aashish money";
+	require_once('includes/functions.php');
+	require_once("includes/open_db.php");
+	include('includes/header.php');
+	include('includes/footer.php');
+
+	if(isset($_POST['credit_card'])){
+		if(!isValidCard($_POST['credit_card'])){
+			echo '<script>alert("Invalid credit card!")</script>';
+			unset($_POST['credit_card']);
+            ob_get_clean();
+		}else{
+			checkStuffOut($db, $_SESSION['current_user']);
+			eraseCart($db, $_SESSION['current_user']);
+            ob_get_clean();
+			header("Location: userview.php");
+			exit;
+		}
+	}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
-    
-    <?php
-        session_start();
-        $title = "Checkout";
-        $content = "Give Aashish money";
-        require_once('includes/functions.php');
-        require_once("includes/open_db.php");
-        include('includes/header.php');
-        include('includes/footer.php');
-    
-        if(isset($_POST['credit_card'])){
-            if(!isValidCard($_POST['credit_card'])){
-                echo '<script>alert("Invalid credit card!")</script>';
-                unset($_POST['credit_card']);
-            }else{
-                checkStuffOut($db, $_SESSION['current_user']);
-                eraseCart($db, $_SESSION['current_user']);
-                header("Location: userview.php");
-                exit;
-            }
-        }
-    ?>
-	
+<html lang="en">	
 	<body>
 	
 		<header>

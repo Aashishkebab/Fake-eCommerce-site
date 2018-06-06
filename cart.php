@@ -1,20 +1,20 @@
+<?php
+	session_start();
+	$title = "Cart";
+	$content = "Checkout random software from Aashish";
+	require_once('includes/functions.php');
+	require_once("includes/open_db.php");
+	include('includes/header.php');
+	include('includes/footer.php');
+
+	if(isset($_POST['removeFromCart'])){
+		removeFromCart($_SESSION['current_user'], $_POST['identifier'], $db);
+		unset($_POST['removeFromCart']);
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
-    <?php
-        session_start();
-        $title = "Cart";
-        $content = "Checkout random software from Aashish";
-        require_once('includes/functions.php');
-        require_once("includes/open_db.php");
-        include('includes/header.php');
-        include('includes/footer.php');
-
-        if(isset($_POST['removeFromCart'])){
-            removeFromCart($_SESSION['current_user'], $_POST['identifier'], $db);
-            unset($_POST['removeFromCart']);
-        }
-    ?>
 
 	<body>
 
