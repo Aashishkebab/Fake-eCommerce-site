@@ -1,14 +1,14 @@
-  <?php
+<?php
 	session_start();
 	ob_start();
-    include ("functions.php");
+	include ("functions.php");
 
-    //logout current user
-    unset($_SESSION['current_user']);
-    $_SESSION['message'] = 'You have been logged out.';
-    ob_get_clean();
-    header('Location: login_message.php');
-  ?>
+	//logout current user
+	unset($_SESSION['current_user']);
+	$_SESSION['message'] = 'You have been logged out.';
+	ob_get_clean();
+	header('Location: login_message.php');
+?>
 
 <!DOCTYPE html>
 <html>
@@ -17,5 +17,4 @@
     <meta charset="utf-8">
   </head>
 </html>
-
 

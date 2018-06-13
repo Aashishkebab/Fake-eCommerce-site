@@ -1,5 +1,4 @@
 # eCommerce site
-### [Direct Link](http://www.aashishbharadwaj.com/fakestore/)
 ## How to use
 
 1. Install [XAMPP](https://www.apachefriends.org/download.html)

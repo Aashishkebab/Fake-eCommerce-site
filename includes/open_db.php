@@ -1,5 +1,5 @@
 <?php
-    $servername = 'localhost';
+    $servername = 'storedatabase.aashishbharadwaj.com';
 
     //For server
     /*$username = 'bharadwaj';
@@ -19,7 +19,7 @@
         $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
-        echo "It no work!";
+        echo "It no work!\n";
         echo $error_message;
         exit();
     }

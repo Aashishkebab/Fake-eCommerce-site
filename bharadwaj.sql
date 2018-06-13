@@ -1,6 +1,6 @@
 -- create and select the database
 -- change your_server_user_name in the following line before running this file
-USE aashishfakestore;  -- MySQL command
+USE bharadwaj;  -- MySQL command
 
 -- drop tables if already exist
 DROP TABLE IF EXISTS orderHistory;
