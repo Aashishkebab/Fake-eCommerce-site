@@ -1,6 +1,8 @@
 <?php
 	session_start();
-    ob_start();
+	if(isset($_POST['credit_card'])){
+		ob_start();
+	}
 	$title = "Checkout";
 	$content = "Give Aashish money";
 	require_once('includes/functions.php');
@@ -12,7 +14,6 @@
 		if(!isValidCard($_POST['credit_card'])){
 			echo '<script>alert("Invalid credit card!")</script>';
 			unset($_POST['credit_card']);
-            ob_get_clean();
 		}else{
 			checkStuffOut($db, $_SESSION['current_user']);
 			eraseCart($db, $_SESSION['current_user']);
