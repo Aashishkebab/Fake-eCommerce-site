@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	ob_start();
 	include ("functions.php");
 	require_once("../includes/open_db.php");
 
@@ -84,7 +83,6 @@
       }
     }//isset
   }//else (new user)
-  ob_get_clean();
 ?>
 
 <!DOCTYPE html>
