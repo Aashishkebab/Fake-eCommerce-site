@@ -11,7 +11,7 @@
 
 5. Log in as **root** by entering username as "root" with a blank password.
 
-6. Click on the **Databases** tab, then type *bharadwaj* in the "Database name" field, then click **Create**.
+6. Click on the **Databases** tab, then type *fakestore* in the "Database name" field, then click **Create**.
 
 7. Now click on the **Priviledges** tab, and click **Edit Proviledges** for the ***root*** user under **localhost**.
 
