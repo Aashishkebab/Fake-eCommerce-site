@@ -13,7 +13,7 @@
     $username = "aashishkebab";
     $password = "qsxDrfv^#7";
 
-    $dbname = 'aashishfakestore';
+    $dbname = 'fakestore';
 
     try {
         $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
