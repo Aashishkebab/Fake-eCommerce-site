@@ -1,5 +1,5 @@
 <?php
-    $servername = 'storedatabase.aashishbharadwaj.com';
+    $servername = 'localhost';
 
     //For localhost
     $username = "root";
