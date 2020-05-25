@@ -1,17 +1,9 @@
 <?php
     $servername = 'storedatabase.aashishbharadwaj.com';
 
-    //For server
-    /*$username = 'bharadwaj';
-    $password = 'DRF3F';*/
-
     //For localhost
-    /*$username = "root";
-    $password = "";*/
-
-    //For my server
-    $username = "aashishkebab";
-    $password = "qsxDrfv^#7";
+    $username = "root";
+    $password = "";
 
     $dbname = 'fakestore';
 
