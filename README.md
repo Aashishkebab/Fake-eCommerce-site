@@ -13,7 +13,7 @@
 
 6. Click on the **Databases** tab, then type *fakestore* in the "Database name" field, then click **Create**.
 
-7. Now click on the **Priviledges** tab, and click **Edit Proviledges** for the ***root*** user under **localhost**.
+7. Now click on the **Priviledges** tab, and click **Edit Proviledges** for the ***root*** user under **localhost**, then click **Databases** and make sure fakestore has been added.
 
 8. **Check all**, then click **Go** at the bottom of the page.
 
